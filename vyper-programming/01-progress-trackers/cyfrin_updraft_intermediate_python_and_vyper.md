@@ -15,5 +15,15 @@ _______________________________________________________________________________
 21. Install Vscode Macos Linux
 22. Install Wsl
 23. Vscode Windows Install
+24. Vscode Windows Wsl Extension
+25. Vscode Quickstart
+26. Install Python Macos
+27. Install Python Wsl Linux
+28. Vscode Quickstart 2
+29. Mental Prep
+30. Local Py
+31. Python Shell
+32. Python Extensions Vscode
+33. Our First Python
 
 _______________________________________________________________________________
