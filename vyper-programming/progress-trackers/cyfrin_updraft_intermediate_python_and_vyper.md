@@ -2,7 +2,7 @@
 _______________________________________________________________________________
 ## Section 1: Python In Updraft
 
-### Completed
+### Completed Sections
 1. Intro
 2. Google Collab
 3. Setup
@@ -27,7 +27,17 @@ _______________________________________________________________________________
 33. Our First Python
 34. Python Imports
 35. Installing Uv
-
+36. Uv Python Version
+37. Adding Packages Uv
 38. Virtual Envs
 39. Recap Pt. 2
+_______________________________________________________________________________
+## Section 2: Web3py
+
+### Completed Sections
+1. Intro
+2. Setup
+3. Vyper Extension
+4. Compile Python
+
 _______________________________________________________________________________

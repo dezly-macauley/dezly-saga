@@ -1,0 +1,10 @@
+[project]
+name = "sec-2-web3py"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "vyper>=0.4.0",
+    "vyper-lsp>=0.1.0",
+]
