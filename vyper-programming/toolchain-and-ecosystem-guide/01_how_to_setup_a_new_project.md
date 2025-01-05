@@ -14,7 +14,6 @@ which uv
 ```
 
 This will output:
-
 ```
 /usr/bin/uv
 ```
@@ -143,14 +142,52 @@ _______________________________________________________________________________
 This means that each time you open up the directory, 
 you will have to run this command
 
-
 ```
 source .venv/bin/activate
 ```
-
 _______________________________________________________________________________
 ## How to automatically load the virtual environment
 
+First ensure that you have direnv installed
 
+```
+sudo pacman -S --needed direnv
+```
+_______________________________________________________________________________
+
+Then add the following line to the end your `.zshrc` file
+
+eval "$(direnv hook zsh)"
+
+Note: if you are using a starship shell prompt then the direnv line should
+be the second last line in your `.zshrc` file
+
+_______________________________________________________________________________
+Then in your project directory create a `.envrc` file
+```
+cd example-project
+touch .envrc 
+```
+_______________________________________________________________________________
+Open the file and add the line:
+```
+source .venv/bin/activate
+```
+_______________________________________________________________________________
+The last thing you need to do is give `direnv` permission to execute,
+the `.envrc` file
+
+```
+cd example-project
+direnv allow
+```
+_______________________________________________________________________________
+## And that's it!
+
+Every time you enter your project directory, 
+it will use the correct version of Python.
+
+And when you exit the directory it will automatically deactivate
+the virtual environment.
 
 _______________________________________________________________________________
