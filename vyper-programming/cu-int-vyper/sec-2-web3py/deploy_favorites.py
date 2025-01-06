@@ -1,6 +1,9 @@
-# This will allow this file to use the `compile_code` function from the
-# vyper module
+# This will allow this program to use the `compile_code` function from the
+# vyper module to compile `favorites.vy` into bytecode.
 from vyper import compile_code
+from web3 import Web3
+
+# This will give this program a way to create a smart contract from bytecode
 
 def main():
     print("Reading the Vyper code for deployment...")
@@ -28,6 +31,19 @@ def main():
     # 60256040516060206020525f5260405f2055005b5f5ffd5b5f80fd006200180204012a020484190216810a00a165767970657283000
     # 4000014'}
 
+    
+    # SECTION: Turn the compliation_details output into a contract object
+
+    # First create a web3 object to use its functionality
+    # To initialize a web3 instance. You have to connect to a blockchain node 
+    w3 = Web3(Web3.HTTPProvider("https://virtual.sepolia.rpc.tenderly.co/ddaaa368-02a0-4f86-9f62-aa10cb01e7e9"))
+    
+    # NOTE: The link above is from a fake sepolia block node created on Tenderly
+    # https://dashboard.tenderly.co/dezly-macauley/cyfrin-updraft-first-vyper-contract/testnet/df5ea98c-2b12-4755-b0b3-b0aeb410fa86
+
+    # This will return a contract object
+    favorites_contract = w3.eth.contract(bytecode=compliation_details["bytecode"])
+    print(favorites_contract)
 
 if __name__ == "__main__":
     main()

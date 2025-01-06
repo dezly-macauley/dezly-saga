@@ -3,9 +3,6 @@ def main():
     print("The following command was used:")
     print("python 01_basic_structure.py")
     print("The Python interpreter executed this file as a standalone program")
-
-def my_module_message():
-    print("Hey")
     
 # NOTE: `if __name__ == __main__` 
 
@@ -28,5 +25,3 @@ def my_module_message():
 # `main()` in this file
 if __name__ == "__main__":
     main()
-else:
-    my_module_message()
