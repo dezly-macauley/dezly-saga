@@ -13,7 +13,7 @@ def main():
 
     with open("favorites.vy", "r") as favorites_file:
         favorites_code = favorites_file.read()
-        compliation_details = compile_code(favorites_code, output_formats=["bytecode"])
+        compliation_details = compile_code(favorites_code, output_formats=["bytecode", "abi"])
         print(compliation_details)
 
     # NOTE: This will output this
@@ -36,14 +36,27 @@ def main():
 
     # First create a web3 object to use its functionality
     # To initialize a web3 instance. You have to connect to a blockchain node 
-    w3 = Web3(Web3.HTTPProvider("https://virtual.sepolia.rpc.tenderly.co/ddaaa368-02a0-4f86-9f62-aa10cb01e7e9"))
+    w3 = Web3(Web3.HTTPProvider("https://127.0.0.1:8545"))
     
-    # NOTE: The link above is from a fake sepolia block node created on Tenderly
-    # https://dashboard.tenderly.co/dezly-macauley/cyfrin-updraft-first-vyper-contract/testnet/df5ea98c-2b12-4755-b0b3-b0aeb410fa86
+    # NOTE: You need to have anvil (part of the Foundry Framework) 
+    # for this part to work
+    # Run `anvil` in a separate terminal
+    # Look for the line `Listening on 127.0.0.1:8545`
+    # This is the RPC url (It's basically the address of the chain you want
+    # to deploy the smart contract to)
 
     # This will return a contract object
-    favorites_contract = w3.eth.contract(bytecode=compliation_details["bytecode"])
-    print(favorites_contract)
+    favorites_contract = w3.eth.contract(bytecode=compliation_details["bytecode"], abi=compliation_details["abi"])
+    # print(favorites_contract)
+
+#______________________________________________________________________________
+# SECTION: Build the transaction
+
+    transaction = favorites_contract.constructor().build_transaction()
+    breakpoint()
+
+
+#______________________________________________________________________________
 
 if __name__ == "__main__":
     main()
