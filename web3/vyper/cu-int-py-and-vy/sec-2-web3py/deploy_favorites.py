@@ -1,10 +1,20 @@
 # This will allow this program to use the `compile_code` function from the
 # vyper module to compile `favorites.vy` into bytecode.
+from eth_keys.datatypes import PrivateKey
 from vyper import compile_code
 from web3 import Web3
 
 # Open up anvil in the terminal and choose any of the available accounts
-MY_ADDRESS = Web3.to_checksum_address("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266")
+MY_ADDRESS = Web3.to_checksum_address(
+        "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+)
+
+# WARNING: This is bad practice!!! 
+# Never have you private key in plain text like this!!
+# This is fine for now because this is a fake account
+
+# Open up anvil in the terminal and choose any of the available accounts
+PRIVATE_KEY = "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80" 
 
 # NOTE: to_checksum_address():
 
@@ -162,9 +172,21 @@ def main():
     # When you want to deploy a contract to the EVM ecosystem, 
     # just leave the `to` field blank
     
-    
-    print("")
-    print("The contract was deployed successfully")
+    #__________________________________________________________________________
+    # SECTION: Sign the transaction
+
+    signed_transaction = w3.eth.account.sign_transaction(transaction, private_key=PRIVATE_KEY)
+    print(signed_transaction)
+
+    # NOTE: This is just a signed transaction. 
+    # It has not been sent to the blockchain yet.
+
+    # WARNING: Don't leave signed transactions like this lying around.
+    # This is okay for now as this transaction does not contain real funds
+
+#______________________________________________________________________________
+
+
 
 #______________________________________________________________________________
 
