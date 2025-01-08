@@ -3,6 +3,19 @@
 from vyper import compile_code
 from web3 import Web3
 
+# Open up anvil in the terminal and choose any of the available accounts
+MY_ADDRESS = Web3.to_checksum_address("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266")
+
+# NOTE: to_checksum_address():
+
+# Think of this like a standardized way to write Ethereum addresses that helps catch typos and errors. Here's what it does:
+# Takes a regular Ethereum address (like 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266)
+# Applies a special algorithm that mixes uppercase and lowercase letters based on the address's hash
+# Returns something like: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+# Notice how some letters are uppercase and some are lowercase? That's not random - it's a checksum! If you accidentally mistype even one character, the checksum format would be wrong, and Web3.py would catch the error. It's like built-in error detection.
+
+
 # This will give this program a way to create a smart contract from bytecode
 
 def main():
@@ -92,27 +105,66 @@ def main():
 
     print("Building the transaction...")
 
+#______________________________________________________________________________
+
+    # SUB_SECTION: Setting the `nonce` field of the smart contract
+
+    # The value inside the bracket is the public address of the account
+    # that you will use to deploy the smart contract
+    # You can get this from Anvil
+
+    # Open up anvil in the terminal an go to available accounts 0
+
+    nonce = w3.eth.get_transaction_count(MY_ADDRESS)
+
     # This is will use the `web3` module to automatically 
     # populate a lot of the fields that a transaction would have.
     
-    # NOTE: The `bytecode` and `abi` field were already filled in when the
+    # The `bytecode` and `abi` field were already filled in when the
     # `favorites_contract` variable was created
-    transaction = favorites_contract.constructor().build_transaction()
-    print(transaction)
 
-    # {'value': 0, 'gas': 191170, 'maxFeePerGas': 3000000000, 'maxPriorityFeePerGas': 1000000000, 'chainId': 3133
-    # 7, 'data': '0x3461001a5760075f5561021661001e61000039610216610000f35b5f80fd5f3560e01c60026005820660011b61020
-    # c01601e395f51565b636057361d811861003457602436103417610208576004355f55005b632578e0f0811861020457602436103417
-    # 610208576004356005811015610208576001015460405260206040f35b632e64cec1811861007d5734610208575f546040526020604
-    # 0f35b635ec0e9c981186102045760243610341761020857602080604052600660043560058110156102085702600601816040016040
-    # 825482528060208301526001830181830160208254015f81601f0160051c600581116102085780156100f457905b808501548160051
-    # b8501526001018181186100de575b5050508051806020830101601f825f03163682375050601f19601f825160200101169050905081
-    # 01905090509050810190506040f35b6305a856868118610204576044361034176102085760043560040180356064811161020857506
-    # 0208135018082604037505060243560e0526020604051018060406101005e5060066024546005811015610208570260060160e05181
-    # 5560206101005101600182015f82601f0160051c600581116102085780156101c257905b8060051b610100015181840155600101818
-    # 1186101aa575b5050505050602435602454600581101561020857600101556024546001810181811061020857905060245560243560
-    # 256040516060206020525f5260405f2055005b5f5ffd5b5f80fd006200180204012a020484190216810a00a16576797065728300040
-    # 00014', 'to': b''}
+    transaction = favorites_contract.constructor().build_transaction(
+
+        # NOTE: Setting the nonce and other fields manually
+        {
+            "nonce": nonce,
+            "from": MY_ADDRESS,
+            "gasPrice": w3.eth.gas_price
+        }
+
+    )
+
+    # NOTE: How to modify a specific field
+
+    # transaction["nonce"] = nonce
+#______________________________________________________________________________
+    
+    print(transaction)
+    
+    # This will output
+
+
+    # {'value': 0, 'gas': 191170, 'chainId': 31337, 'nonce': 0, 'from': '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb922
+    # 66', 'gasPrice': 2000000000, 'data': '0x3461001a5760075f5561021661001e61000039610216610000f35b5f80fd5f3560e
+    # 01c60026005820660011b61020c01601e395f51565b636057361d811861003457602436103417610208576004355f55005b632578e0
+    # f0811861020457602436103417610208576004356005811015610208576001015460405260206040f35b632e64cec1811861007d573
+    # 4610208575f5460405260206040f35b635ec0e9c9811861020457602436103417610208576020806040526006600435600581101561
+    # 02085702600601816040016040825482528060208301526001830181830160208254015f81601f0160051c600581116102085780156
+    # 100f457905b808501548160051b8501526001018181186100de575b5050508051806020830101601f825f03163682375050601f1960
+    # 1f82516020010116905090508101905090509050810190506040f35b6305a8568681186102045760443610341761020857600435600
+    # 401803560648111610208575060208135018082604037505060243560e0526020604051018060406101005e50600660245460058110
+    # 15610208570260060160e051815560206101005101600182015f82601f0160051c600581116102085780156101c257905b8060051b6
+    # 101000151818401556001018181186101aa575b50505050506024356024546005811015610208576001015560245460018101818110
+    # 61020857905060245560243560256040516060206020525f5260405f2055005b5f5ffd5b5f80fd006200180204012a0204841902168
+    # 10a00a1657679706572830004000014', 'to': b''}
+
+    # NOTE: The `to` field is empty for a reason
+    # When you want to deploy a contract to the EVM ecosystem, 
+    # just leave the `to` field blank
+    
+    
+    print("")
+    print("The contract was deployed successfully")
 
 #______________________________________________________________________________
 
