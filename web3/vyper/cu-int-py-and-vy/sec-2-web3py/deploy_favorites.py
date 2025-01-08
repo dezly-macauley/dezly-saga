@@ -1,23 +1,35 @@
 # This will allow this program to use the `compile_code` function from the
 # vyper module to compile `favorites.vy` into bytecode.
+import getpass
 from vyper import compile_code
 from web3 import Web3
+from dotenv import load_dotenv
 
+# NOTE: Import the `KEYSTORE_PATH` variable from the file `encrypt_key.py` 
+from encrypt_key import KEYSTORE_PATH
+
+# This is a built-in module
+import os
+
+load_dotenv()
 # This is the address of the blockchain that you will be 
 # deploying the contract to
-RPC_URL = "http://127.0.0.1:8545"
+RPC_URL = os.getenv("ANVIL_RPC_URL")
 
+# Anvil - Available account (0)
+ADDRESS_OF_DEPLOYER = os.getenv("ADDRESS_OF_DEPLOYER")
 # Open up anvil in the terminal and choose any of the available accounts
-MY_ADDRESS = Web3.to_checksum_address(
-        "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
-)
+# MY_ADDRESS = Web3.to_checksum_address(ADDRESS_OF_DEPLOYER)
+
 
 # WARNING: This is bad practice!!! 
 # Never have you private key in plain text like this!!
 # This is fine for now because this is a fake account
 
 # Open up anvil in the terminal and choose any of the available accounts
-PRIVATE_KEY = "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80" 
+# PRIVATE_KEY = "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80" 
+PRIVATE_KEY = decrypt_key()
+
 
 # NOTE: to_checksum_address():
 
@@ -153,6 +165,8 @@ def main():
 #______________________________________________________________________________
     
     print(transaction)
+
+    private_key = decrypt_key()
     
     # This will output
 
@@ -198,6 +212,17 @@ def main():
     tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
 
     print(f"The contract has been deployed to {tx_receipt.contractAddress}")
+
+#______________________________________________________________________________
+    # SECTION: Send transaction
+
+    def decrypt_key() -> str:
+        with open(KEYSTORE_PATH, "r") as fp:
+            encrypted_account = fp.read()
+            password = getpass.getpass("Enter your password: ")
+            key = Account.decrypt(encrypted_account, password)
+            print("Decrypted key!")
+            return key
 
 #______________________________________________________________________________
 
