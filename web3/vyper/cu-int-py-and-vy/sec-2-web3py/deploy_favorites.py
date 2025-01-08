@@ -1,8 +1,11 @@
 # This will allow this program to use the `compile_code` function from the
 # vyper module to compile `favorites.vy` into bytecode.
-from eth_keys.datatypes import PrivateKey
 from vyper import compile_code
 from web3 import Web3
+
+# This is the address of the blockchain that you will be 
+# deploying the contract to
+RPC_URL = "http://127.0.0.1:8545"
 
 # Open up anvil in the terminal and choose any of the available accounts
 MY_ADDRESS = Web3.to_checksum_address(
@@ -96,7 +99,7 @@ def main():
 
     # First create a web3 object to use its functionality
     # To initialize a web3 object. You have to connect to a blockchain node 
-    w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:8545"))
+    w3 = Web3(Web3.HTTPProvider(RPC_URL))
     
     # This will return a contract object
     # The bytecode of this contract will be set to the bytecode field of 
@@ -185,8 +188,16 @@ def main():
     # This is okay for now as this transaction does not contain real funds
 
 #______________________________________________________________________________
+    # SECTION: Send transaction
 
+    # transaction hash
+    tx_hash = w3.eth.send_raw_transaction(signed_transaction.rawTransaction)
+    print(f"My transaction hash is {tx_hash}")
 
+    # SUB_SECTION: Wait for the transaction to be completed after sending it
+    tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
+
+    print(f"The contract has been deployed to {tx_receipt.contractAddress}")
 
 #______________________________________________________________________________
 
