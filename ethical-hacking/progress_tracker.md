@@ -1,0 +1,7 @@
+# Cisco Networking Academy - Ethical Hacker
+_______________________________________________________________________________
+## `Completed` Course Introduction
+_______________________________________________________________________________
+## Module 1: Introduction to Ethical Hacking and Penetration Testing
+
+_______________________________________________________________________________
