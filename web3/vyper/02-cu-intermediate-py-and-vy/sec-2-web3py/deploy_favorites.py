@@ -30,7 +30,6 @@ ADDRESS_OF_DEPLOYER = os.getenv("ADDRESS_OF_DEPLOYER")
 # PRIVATE_KEY = "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80" 
 PRIVATE_KEY = decrypt_key()
 
-
 # NOTE: to_checksum_address():
 
 # Think of this like a standardized way to write Ethereum addresses that helps catch typos and errors. Here's what it does:

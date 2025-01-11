@@ -8,3 +8,4 @@
 
 has_favorite_number: bool
 my_favorite_number: uint256
+
