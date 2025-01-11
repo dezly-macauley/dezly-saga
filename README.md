@@ -3,7 +3,6 @@ ___
 
 <!-- <img src="./dezly_saga.gif" width="300" height="200" /> -->
 
-___
 ## Technologies that interest me
 
 ___
@@ -11,8 +10,13 @@ ___
 
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
     <img src="./00-tech-logos/rust.png" width="50" height="50" alt="Rust Logo" />
+    <img src="./00-tech-logos/zig.png" width="50" height="50" alt="Zig Logo" />
     <img src="./00-tech-logos/go.png" width="50" height="50" alt="Go Logo" />
 </div>
+
+1. Rust
+2. Zig
+3. Go
 
 ___
 ### Web 3
