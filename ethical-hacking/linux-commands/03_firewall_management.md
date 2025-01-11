@@ -69,5 +69,27 @@ This blocks others from accessing your computer via html
 sudo ufw deny 80/tcp
 sudo ufw deny 443/tcp
 ```
+_______________________________________________________________________________
+
+DNS issues
+
+Open the `resolv.conf` file with Neovim
+```
+sudo nvim /etc/resolv.conf
+```
+
+If you are having issues connecting to the internet, a quick fix solution
+is just to delete everything that is in that file and use Google Public DNS
+
+Replace the contents of the file with this:
+
+```
+nameserver 8.8.8.8
+nameserver 8.8.8.4
+
+```
+
+8.8.8.4 is a backup incase 8.8.8.8 ever goes down.
 
 
+_______________________________________________________________________________
