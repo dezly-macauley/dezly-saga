@@ -1,9 +1,7 @@
 # 🎒 Dezly Saga 
 ___
 
-<!-- <img src="./dezly_saga.gif" width="300" height="200" /> -->
-
-## Technologies that interest me
+<img src="./dezly_saga.gif" width="300" height="200" />
 
 ___
 ### Systems Programming
@@ -12,23 +10,24 @@ ___
     <img src="./00-tech-logos/rust.png" width="50" height="50" alt="Rust Logo" />
     <img src="./00-tech-logos/zig.png" width="50" height="50" alt="Zig Logo" />
     <img src="./00-tech-logos/go.png" width="50" height="50" alt="Go Logo" />
+    <img src="./00-tech-logos/assembly.png" width="50" height="50" alt="Go Logo" />
 </div>
 
 1. Rust
 2. Zig
 3. Go
+4. Assembly
 
 ___
-### Web 3
+### AI
 
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-    <img src="./00-tech-logos/python.png" width="50" height="50" alt="Python Logo" />
-    <img src="./00-tech-logos/vyper.png" width="50" height="50" alt="Vyper Logo" />
+    <img src="./00-tech-logos/tensorflow.png" width="50" height="50" alt="Vyper Logo" />
+    <img src="./00-tech-logos/python.png" width="50" height="50" alt="Vyper Logo" />
 </div>
 
-1. Python
-2. Vyper
-
+5. TensorFlow 
+6. Python 
 ___
 ### Database Management
 
@@ -36,17 +35,17 @@ ___
     <img src="./00-tech-logos/sqlite.png" width="50" height="50" alt="SQLite Logo" />
 </div>
 
-1. SQLite
+7. SQLite
 
 ___
-### Front-End Development 
+
+### Web 3
 
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-        <img src="./00-tech-logos/typescript.png" width="50" height="50" alt="TypeScript Logo" />
-        <img src="./00-tech-logos/svelte.png" width="50" height="50" alt="Svelte Logo" />
+    <img src="./00-tech-logos/vyper.png" width="50" height="50" alt="Vyper Logo" />
 </div>
 
-1. TypeScript 
-2. Svelte
+8. Vyper
+- Python
 
 ___
