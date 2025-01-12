@@ -14,6 +14,14 @@ pub fn main() void {
     // Your score is -15
 
     //_________________________________________________________________________
+
+    // NOTE: How to print the variable type of a variable in Zig
+
+    const type_of_player_score = @TypeOf(player_score);
+    print("player_score is of the type: {}\n", .{type_of_player_score});
+    // player_score is of the type: i32
+
+    //_________________________________________________________________________
     // SECTION: Unsigned Integers (Only positive numbers allowed)
 
     const number_of_ninjas: u32 = 5;
@@ -32,18 +40,10 @@ pub fn main() void {
     // The player is the team leader: false
 
     //_________________________________________________________________________
-    // SECTION: strings
+    // SECTION: String Slice
 
-    const player_name = "Dezly Macauley";
+    const player_name: []const u8 = "Dezly Macauley";
     print("Hello {s}\n", .{player_name});
-
-    //_________________________________________________________________________
-    // NOTE: How to print the variable type of a variable in Zig
-    //
-    const type_of_player_name = @TypeOf(player_name);
-    print("The variable type of player name is {}\n", .{type_of_player_name});
-
-    // The variable type of player name is *const [14:0]u8
 
     //_________________________________________________________________________
 
