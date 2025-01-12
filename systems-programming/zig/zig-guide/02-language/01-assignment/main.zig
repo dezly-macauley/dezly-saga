@@ -46,5 +46,18 @@ pub fn main() void {
     print("Hello {s}\n", .{player_name});
 
     //_________________________________________________________________________
+    // SECTION: Unused variables
+
+    // By default Zig will give a warning about unused variables
+    // You can avoid the compiler warning by using an underscore.
+
+    const ninja_stars: u32 = 71;
+
+    // NOTE: This tells the compiler:
+    // "I know that I am not using the ninja_stars variable I created
+    // in this program. Don't warn me about it"
+    _ = ninja_stars;
+
+    //_________________________________________________________________________
 
 }
