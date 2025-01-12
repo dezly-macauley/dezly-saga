@@ -1,16 +1,50 @@
-const std = @import("std");
+const print = @import("std").debug.print;
 
 pub fn main() void {
-    // Value assignment has the following syntax: (const|var) identifier[: type] = value.
 
-    // 32 bit integer
-    const my_constant: i32 = 5;
-    std.debug.print("my_constant: {}\n", .{my_constant});
+    //_________________________________________________________________________
+    // SECTION: Basic Syntax
+    // const (or var) name_of_varible: the_type_of_the_variable = value;
 
-    // 32 bit unsigned integer
-    var my_variable: u32 = 5000;
-    std.debug.print("my_variable: {}\n", .{my_variable});
+    //_________________________________________________________________________
+    // SECTION: Integers (Negative and positive numbers allowed)
 
-    my_variable = 700;
-    std.debug.print("my_variable: {}\n", .{my_variable});
+    const player_score: i32 = -15;
+    print("Your score is {}\n", .{player_score});
+    // Your score is -15
+
+    //_________________________________________________________________________
+    // SECTION: Unsigned Integers (Only positive numbers allowed)
+
+    const number_of_ninjas: u32 = 5;
+    print("There are {} ninjas\n", .{number_of_ninjas});
+    // There are 5 ninjas
+
+    //_________________________________________________________________________
+    // SECTION: booleans
+
+    const has_magic: bool = true;
+    print("The player can use magic: {}\n", .{has_magic});
+    // The player can use magic: true
+
+    const is_team_leader: bool = false;
+    print("The player is the team leader: {}\n", .{is_team_leader});
+    // The player is the team leader: false
+
+    //_________________________________________________________________________
+    // SECTION: strings
+
+    const player_name = "Dezly Macauley";
+    print("Hello {s}\n", .{player_name});
+
+    //_________________________________________________________________________
+    // NOTE: How to print the variable type of a variable in Zig
+    //
+    const type_of_player_name = @TypeOf(player_name);
+    print("The variable type of player name is {}\n", .{type_of_player_name});
+
+    // The variable type of player name is *const [14:0]u8
+
+    //_________________________________________________________________________
+
 }
