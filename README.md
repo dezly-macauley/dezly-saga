@@ -26,12 +26,10 @@ ___
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
     <img src="./00-tech-logos/tensorflow.png" width="50" height="50" alt="Vyper Logo" />
     <img src="./00-tech-logos/mojo.png" width="50" height="50" alt="Vyper Logo" />
-    <img src="./00-tech-logos/python.png" width="50" height="50" alt="Vyper Logo" />
 </div>
 
-5. TensorFlow 
-6. Mojo
-7. Python 
+6. TensorFlow (Python)
+7. Mojo (Python)
 ___
 ### Database Management
 
@@ -42,6 +40,15 @@ ___
 8. SQLite
 
 ___
+### Ethical Hacking
+
+<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
+    <img src="./00-tech-logos/python.png" width="50" height="50" alt="Vyper Logo" />
+</div>
+
+9. Python
+
+___
 
 ### Web 3
 
@@ -49,7 +56,15 @@ ___
     <img src="./00-tech-logos/vyper.png" width="50" height="50" alt="Vyper Logo" />
 </div>
 
-9. Vyper
-- Python
+9. Vyper (Python)
+
+___
+### Web Frameworks
+
+<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
+    <img src="./00-tech-logos/django.png" width="50" height="50" alt="Vyper Logo" />
+</div>
+
+10. Django (Python)
 
 ___
