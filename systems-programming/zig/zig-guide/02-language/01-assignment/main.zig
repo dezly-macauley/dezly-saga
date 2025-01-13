@@ -40,10 +40,28 @@ pub fn main() void {
     // The player is the team leader: false
 
     //_________________________________________________________________________
-    // SECTION: String Slice
+    // SECTION: String Slice (Immutable, dynamic length)
+
+    // String slices are immutable,
+    // meaning you cannot change the contents of the slice.
+
+    // NOTE: Breakdown of []const u8:
+
+    // []: This indicates a slice. It means the array can be of variable length.
+    // const: This makes the contents immutable.
+    // You can't modify the elements of the slice.
+    // u8: This is the type of the elements in the slice.
+    // u8 represents an 8-bit unsigned integer,
+    // which is the fundamental type used for bytes.
 
     const player_name: []const u8 = "Dezly Macauley";
     print("Hello {s}\n", .{player_name});
+
+    //_________________________________________________________________________
+    // SECTION: Byte Arry (Mutable, fixed sized)
+
+    // const my_byte_arry: [3]u8 = [3]u8{ 81, 21, 4 };
+    // print(my_byte_arry[0]);
 
     //_________________________________________________________________________
     // SECTION: Unused variables
