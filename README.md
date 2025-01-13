@@ -25,11 +25,13 @@ ___
 
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
     <img src="./00-tech-logos/tensorflow.png" width="50" height="50" alt="Vyper Logo" />
+    <img src="./00-tech-logos/mojo.png" width="50" height="50" alt="Vyper Logo" />
     <img src="./00-tech-logos/python.png" width="50" height="50" alt="Vyper Logo" />
 </div>
 
 5. TensorFlow 
-6. Python 
+6. Mojo
+7. Python 
 ___
 ### Database Management
 
@@ -37,7 +39,7 @@ ___
     <img src="./00-tech-logos/sqlite.png" width="50" height="50" alt="SQLite Logo" />
 </div>
 
-7. SQLite
+8. SQLite
 
 ___
 
@@ -47,7 +49,7 @@ ___
     <img src="./00-tech-logos/vyper.png" width="50" height="50" alt="Vyper Logo" />
 </div>
 
-8. Vyper
+9. Vyper
 - Python
 
 ___
