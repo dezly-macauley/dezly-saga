@@ -1,17 +1,13 @@
-// NOTE: If statements accept `bool` values (true or false)
+const print = @import("std").debug.print;
 
-// Unlike C or JavaScript, there are no values that
-// implicitly coerce to bool values
+pub fn main() void {
+    const value: i32 = 5;
 
-const expect = @import("std").testing.expect;
-
-test "if statement" {
-    const a = true;
-
-    if (a) {
-        x += 1;
+    if (value < 5) {
+        print("Value is less than 5\n", .{});
+    } else if (value == 5) {
+        print("Value is exactly 5\n", .{});
     } else {
-        x += 2;
+        print("The value is greater than 5\n", .{});
     }
-    try expect (x == 1)
 }
