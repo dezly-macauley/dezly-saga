@@ -40,7 +40,7 @@ ___
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
     <img src="./00-tech-logos/assembly.png" width="50" height="50" alt="Assembly Logo" />
 </div>
-1. Assembly
+1. x86-64 assembly 
 
 ___
 ### Artificial Intelligence
