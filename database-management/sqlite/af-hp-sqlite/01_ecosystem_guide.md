@@ -51,6 +51,28 @@ Create a virtual environment that contains the version of Python that you want
 uv venv -p python3.13
 ```
 _______________________________________________________________________________
+
+### Additional commands: 
+
+#### uv sync
+
+If you have just download a uv project (E.g. Using `git clone` ),
+then use the command:
+```
+uv sync
+```
+This will look at the `pyproject.toml` file, 
+and install all of the dependencies needed by the project.
+
+_______________________________________________________________________________
+
+#### uv tool install
+
+Use this command as a way to install Python tools globally ( E.g. When you 
+want certain commands to be available outside of your repo, 
+such as language support protocols).
+
+_______________________________________________________________________________
 To activate the virtual environment, 
 you will need to enter this command everytime you enter the directory:
 
