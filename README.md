@@ -67,17 +67,21 @@ ___
 **`Programming Languages`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
     <img src="./00-tech-logos/vyper.png" width="50" height="50" alt="Vyper Logo" />
+    <img src="./00-tech-logos/solidity.png" width="60" height="60" alt="Solidity Logo" />
 </div>
 
 1. Vyper (Python)
+2. Solidity (TypeScript)
 
 **`Frameworks`**
 
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
     <img src="./00-tech-logos/moccasin.png" width="50" height="50" alt="Moccasin Logo" />
+    <img src="./00-tech-logos/foundry.png" width="50" height="50" alt="Foundry Logo" />
 </div>
 
-1. Moccasin (Vyper, Python)
+1. Moccasin (Vyper)
+2. Foundry (Solidity)
 
 ___
 ### Web Development 
