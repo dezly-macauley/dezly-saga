@@ -45,10 +45,31 @@ initialize the repo:
 cd name-of-repo
 uv init
 ```
+_______________________________________________________________________________
+Update the following files with the version of Python that you want:
+
+E.g. I want Python version 3.13
+
+.python-version
+```
+3.13
+```
+
+pyproject.toml
+(This means any version of Python that is 3.13 or higher)
+```
+requires-python = ">=3.13"
+```
+
+NOTE: If you wanted to specify a range then you can do the following:
+
+requires-python = ">=3.9, <3.13"
+
+_______________________________________________________________________________
 
 Create a virtual environment that contains the version of Python that you want
 ```
-uv venv -p python3.13
+uv venv -p 3.13
 ```
 _______________________________________________________________________________
 
@@ -168,5 +189,15 @@ To exit:
 exit
 ```
 
+
+_______________________________________________________________________________
+
+### Why SQLite
+
+I am using `Django` which is one the most lucrative Python web frameworks 
+to learn, and the default database 
+when you create a new Django project is SQLite.
+
+The file in Django is `db.sqlite3`
 
 _______________________________________________________________________________
