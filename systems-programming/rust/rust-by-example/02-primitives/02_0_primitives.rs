@@ -69,18 +69,45 @@ fn main() {
     // it is not considered a compound type 
     // because it does not contain multiple values.
 
-    // This is not the most practical use of a unit type.
-    // The unit type is usually used by functions
-
-    // TODO: I will discuss this further in the `functions section`
-
+    // NOTE: The unit type does not implement `Display` so to print it,
+    // you need to use the `debug` formater `{:?}`
     let does_not_return_anything: () = ();
     println!("does_not_return_anything: {:?}", does_not_return_anything);
     // does_not_return_anything: ()
 
-    // NOTE: The unit type does not implement `Display` so to print it,
-    // you need to use the `debug` formater `{:?}`
-    
+    //_________________________________________________________________________
+
+    // NOTE: Normally you would not print a unit type
+    // A practical example would be a function that returns nothing.
+
+    // E.g.
+    /*
+        The main function in Rust actually returns a unit type 
+        
+        fn main() -> () {
+
+        }
+
+        But for simplicity, if a function does not return anything in 
+        Rust, you simply leave out the return type.
+
+        fn main() {
+
+        }
+
+        If fn main() did have a return type then it would look like this:
+
+        fn main() -> i8 {
+            
+
+            // return an status code of 0 if the program completed without
+            // any issues.
+            return 0;
+        }
+
+    */
+        
+
     //_________________________________________________________________________
     // SECTION: Compound Types
 
