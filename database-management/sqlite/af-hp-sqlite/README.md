@@ -17,4 +17,6 @@ export DIRENV_LOG_FORMAT=""
 
 Use this to load a litecli configuration for a specific database
 
-litecli --liteclirc $litecli_config_path
+```
+litecli --liteclirc $litecli_config_path database_file.sqlite
+```
