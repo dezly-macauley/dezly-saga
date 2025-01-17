@@ -84,12 +84,58 @@ fn main() {
     //_________________________________________________________________________
     // SECTION: Compound Types
 
-    // Arrays like [1, 2, 3]
-    // Tuples like (1, true)
+    //_________________________________________________________________________
+    // SUB_SECTION: Arrays
+    // 1. All values in the array must be of the same type
+    // 2. An array can only have values of the same type.
+   
+    // This is an array of that can hold five i32 numbers
+    let list_of_numbers: [i32; 5] = [20, 12, 23, 41, 15];
+    println!("list_of_numbers: {:?}", list_of_numbers);
+    // list_of_numbers: [20, 12, 23, 41, 15]
 
+    // NOTE: The array type does not implement `Display` so to print it,
+    // you need to use the `debug` formater `{:?}`
 
-    // SECTION: Compound Types
-    // 1. Arrays
-    // 2. Tuples
+    //_________________________________________________________________________
+    // SUB_SECTION: Tuples
+
+    // NOTE: 1. Tuples do not implement `Display` so to print it,
+    // you need to use the `debug` formater `{:?}`
+    
+    let player_info: (i32, bool, f64) = (192, true, 43.20);
+    println!("player_info: {:?}", player_info);
+    // player_info: (192, true, 43.2)
+
+    //_________________________________________________________________________
+
+    // NOTE: 2. Destructuring a tuple
+    // You can assign the values inside of a tuple to indivual variable
+    // types
+
+    let number_of_swords: i32 = 0; 
+    println!("number_of_swords: {}", number_of_swords);
+    // number_of_swords: 0
+
+    let can_dual_wield: bool = false; 
+    println!("can_dual_wield: {}", can_dual_wield);
+    // can_dual_wield: false
+
+    let player_money: f64 = 0.0; 
+    println!("player_money: {}", player_money);
+    // player_money: 0
+    
+    let (number_of_swords, can_dual_wield, player_money) = player_info;
+
+    println!("number_of_swords: {}", number_of_swords);
+    // number_of_swords: 192
+
+    println!("can_dual_wield: {}", can_dual_wield);
+    // can_dual_wield: true
+
+    println!("player_money: {}", player_money);
+    // player_money: 43.2
+
+    //_________________________________________________________________________
 
 }
