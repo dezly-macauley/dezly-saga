@@ -76,6 +76,12 @@ directory `target/debug`
 
 If you want to compile and run your program in one step:
 ```
+cargo run --bin name-of-project
+```
+
+NOTE: If `main` is the only binary in your project then you can just
+use the command:
+```
 cargo run
 ```
 
