@@ -85,4 +85,9 @@ use the command:
 cargo run
 ```
 
+For quiet outputs:
+```
+cargo run --quiet --bin name-of-project
+```
+
 _______________________________________________________________________________

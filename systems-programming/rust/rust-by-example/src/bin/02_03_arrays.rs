@@ -4,5 +4,5 @@
 // 3. The length of an array must be known at compile time
 
 fn main() {
-    let my_array: [i32, 5] = []
+    // let my_array: [i32; 3] = [16, 26, 7];
 }
