@@ -1,0 +1,11 @@
+[project]
+name = "sec3-boa-favs"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "titanoboa>=0.1.9",
+    "vyper>=0.4.0",
+    "vyper-lsp>=0.1.0",
+]
