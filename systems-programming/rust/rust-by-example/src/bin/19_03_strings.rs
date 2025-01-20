@@ -32,8 +32,18 @@
 // - Includes Emojis
 // ------------------------------------------------------------------------
 // Unicode encoding schemes:
-// UTF-8, UTF-16, and UTF-32 are the main encoding schemes for Unicode
-
+// UTF-8, UTF-16, and UTF-32 are the main encoding schemes for Unicode.
+// UTF-8: Variable-length encoding (1 to 4 bytes per character).
+// UTF-16: Variable-length encoding (2 or 4 bytes per character).
+// UTF-32: Fixed-length encoding (4 bytes per character).
+// The most common is UTF-8
+// ------------------------------------------------------------------------
+// Characters like ASCII characters (like A) take 1 byte.
+// Characters like é or 中 take 2 to 3 bytes.
+// Emojis like 🍑 take 4 bytes.
+// ------------------------------------------------------------------------
+// So this is why `u8` is used. 
+// `u8`can hold up to 4 bytes, which is more than enough for any character
 // ------------------------------------------------------------------------
 // `Vector`
 // 1. A Vector is basically a list of items that can grow 
