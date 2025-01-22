@@ -10,7 +10,7 @@ This where I will tell my story. One key press at a time.
 
 This is the saga of Dezly Macauley.
 
-<img src="./dezly_saga.gif" width="300" height="200" />
+<img src="./.readme/dezly_saga.gif" width="300" height="200" />
 
 >“Without great solitude, no serious work is possible”
 > <br>Pablo Picasso.
@@ -18,45 +18,20 @@ This is the saga of Dezly Macauley.
 ___
 ### Systems Programming
 
-**`Low-Level Control (No garbage collection)`**
+**`Low-Level Control`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-    <img src="./00-tech-logos/rust.png" width="50" height="50" alt="Rust Logo" />
-    <img src="./00-tech-logos/zig.png" width="50" height="50" alt="Zig Logo" />
-    <img src="./00-tech-logos/c.png" width="50" height="50" alt="Go Logo" />
+    <img src="./.readme/rust.png" width="50" height="50" alt="Rust Logo" />
+    <img src="./.readme/zig.png" width="50" height="50" alt="Zig Logo" />
 </div>
 
 1. Rust
 2. Zig
-3. C
-
-**`Higher-Level Control (Garbage collection)`**
-<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-    <img src="./00-tech-logos/go.png" width="50" height="50" alt="Go Logo" />
-</div>
-
-1. Go
-
-**`Assembly Languages`**
-<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-    <img src="./00-tech-logos/assembly.png" width="50" height="50" alt="Assembly Logo" />
-</div>
-1. x86-64 assembly 
-
-___
-### Artificial Intelligence
-
-**`Frameworks`**
-<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-    <img src="./00-tech-logos/tensorflow.png" width="50" height="50" alt="Vyper Logo" />
-</div>
-6. TensorFlow (Python)
-
 ___
 ### Database Management
 
 **`SQL Databases`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-    <img src="./00-tech-logos/sqlite.png" width="50" height="50" alt="SQLite Logo" />
+    <img src="./.readme/sqlite.png" width="50" height="50" alt="SQLite Logo" />
 </div>
 
 1. SQLite
@@ -66,63 +41,54 @@ ___
 
 **`Programming Languages`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-    <img src="./00-tech-logos/vyper.png" width="50" height="50" alt="Vyper Logo" />
-    <img src="./00-tech-logos/solidity.png" width="60" height="60" alt="Solidity Logo" />
+    <img src="./.readme/vyper.png" width="50" height="50" alt="Vyper Logo" />
 </div>
 
-1. Vyper (Python)
-2. Solidity (TypeScript)
+1. Vyper
 
 **`Frameworks`**
 
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
     <img src="./00-tech-logos/moccasin.png" width="50" height="50" alt="Moccasin Logo" />
-    <img src="./00-tech-logos/foundry.png" width="50" height="50" alt="Foundry Logo" />
 </div>
 
-1. Moccasin (Vyper)
-2. Foundry (Solidity)
+1. Moccasin
 
 ___
 ### Web Development 
 
 **`Frameworks`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-    <img src="./00-tech-logos/django.png" width="50" height="50" alt="Django Logo" />
-    <img src="./00-tech-logos/svelte.png" width="50" height="50" alt="Svelte Logo" />
-    <img src="./00-tech-logos/tailwindcss.png" width="50" height="50" alt="Tailwind Logo" />
+    <img src="./.readme/sveltekit.png" width="50" height="50" alt="SvelteKit Logo" />
+    <img src="./.readme/django.png" width="50" height="50" alt="Django Logo" />
+    <img src="./.readme/tailwindcss.png" width="50" height="50" alt="Tailwind CSS Logo" />
 </div>
 
-1. Django (Python)
-2. Svelte (TypeScript)
-3. Tailwind CSS (CSS) 
+1. Django
+2. SvelteKit
+3. Tailwind CSS
 
 **`Build Tools`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-    <img src="./00-tech-logos/uv.png" width="50" height="50" alt="Vite Logo" />
-    <img src="./00-tech-logos/vite.png" width="50" height="50" alt="uv Logo" />
+    <img src="./.readme/uv.png" width="50" height="50" alt="uv Logo" />
+    <img src="./.readme/bun.png" width="50" height="50" alt="Bun Logo" />
+    <img src="./.readme/vite.png" width="50" height="50" alt="Vite Logo" />
 </div>
 
-1. uv (Python)
-2. Vite (TypeScript) 
+1. uv
+2. Bun
+3. Vite
 
 **`Core Languages`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-    <img src="./00-tech-logos/html.png" width="50" height="50" alt="HTML Logo" />
-    <img src="./00-tech-logos/css.png" width="50" height="50" alt="CSS Logo" />
-    <img src="./00-tech-logos/typescript.png" width="50" height="50" alt="TypeScript Logo" />
-    <img src="./00-tech-logos/python.png" width="50" height="50" alt="Python Logo" />
+    <img src="./.readme/python.png" width="50" height="50" alt="Python Logo" />
+    <img src="./.readme/typescript.png" width="50" height="50" alt="TypeScript Logo" />
+    <img src="./.readme/css.png" width="50" height="50" alt="CSS Logo" />
+    <img src="./.readme/html.png" width="50" height="50" alt="HTML Logo" />
 </div>
 
-1. HTML
-2. CSS (HTML)
-3. TypeScript
-5. Python
-
-___
-### Ethical Hacking
-___
-### Personal Training
-___
-### Language Learning 
+1. Python
+2. TypeScript
+3. CSS 
+4. HTML
 ___
