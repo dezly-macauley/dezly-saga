@@ -1,32 +1,50 @@
 # Svelte Dev Tutorial
 _______________________________________________________________________________
-### URL
+## URL
 https://svelte.dev/tutorial/svelte/welcome-to-svelte
 
 _______________________________________________________________________________
-### How this repo was created
+## How this repo was created
 
 ```
 bunx sv create svelte-dev-tutorial
 ```
 
 _______________________________________________________________________________
-### If you have just cloned this repo run this command
+## If you have just cloned this repo run this command
 
 ```
 bun install
 ```
 
 _______________________________________________________________________________
-### How to run files
+## How to run files
 
 ```
 bun run dev --open
 ```
 
 _______________________________________________________________________________
-### Progress Tracker
+## Progress Tracker
+_______________________________________________________________________________
+### 01 - Basic SvelteKit
 
+#### Introduction
+##### `Completed` Welcome to Svelte
+##### `Completed` Your first component 
 
+_______________________________________________________________________________
+### 02 - Advanced Svelte
+
+_______________________________________________________________________________
+### 03 - Basic SvelteKit
+
+#### `Completed` Introduction
+
+#### Routing
+##### `Completed` Pages
+##### `Completed` Layouts
+_______________________________________________________________________________
+### 04 - Advanced SvelteKit
 
 _______________________________________________________________________________

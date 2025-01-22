@@ -64,31 +64,31 @@ ___
     <img src="./.readme/tailwindcss.png" width="50" height="50" alt="Tailwind CSS Logo" />
 </div>
 
-1. Django
-2. SvelteKit
+1. SvelteKit
+2. Django
 3. Tailwind CSS
 
 **`Build Tools`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-    <img src="./.readme/uv.png" width="50" height="50" alt="uv Logo" />
     <img src="./.readme/bun.png" width="50" height="50" alt="Bun Logo" />
+    <img src="./.readme/uv.png" width="50" height="50" alt="uv Logo" />
     <img src="./.readme/vite.png" width="50" height="50" alt="Vite Logo" />
 </div>
 
-1. uv
-2. Bun
+1. Bun
+2. uv
 3. Vite
 
 **`Core Languages`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-    <img src="./.readme/python.png" width="50" height="50" alt="Python Logo" />
-    <img src="./.readme/typescript.png" width="50" height="50" alt="TypeScript Logo" />
-    <img src="./.readme/css.png" width="50" height="50" alt="CSS Logo" />
     <img src="./.readme/html.png" width="50" height="50" alt="HTML Logo" />
+    <img src="./.readme/css.png" width="50" height="50" alt="CSS Logo" />
+    <img src="./.readme/typescript.png" width="50" height="50" alt="TypeScript Logo" />
+    <img src="./.readme/python.png" width="50" height="50" alt="Python Logo" />
 </div>
 
-1. Python
-2. TypeScript
-3. CSS 
-4. HTML
+1. HTML
+2. CSS 
+3. TypeScript
+4. Python
 ___
