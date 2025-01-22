@@ -49,7 +49,7 @@ ___
 **`Frameworks`**
 
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-    <img src="./00-tech-logos/moccasin.png" width="50" height="50" alt="Moccasin Logo" />
+    <img src="./.readme/moccasin.png" width="50" height="50" alt="Moccasin Logo" />
 </div>
 
 1. Moccasin
