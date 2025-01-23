@@ -4,7 +4,7 @@
 
 <nav>
 
-  <h3>Introduction</h3>
+  <h3>01 Introduction</h3>
 
   <a href="/01-basic-svelte-01-introduction-01-welcome-to-svelte">
   01 Welcome to Svelte
@@ -28,6 +28,33 @@
   
   <a href="/01-basic-svelte-01-introduction-06-html-tags">
   06 HTML tags
+  </a>
+
+</nav>
+
+<hr>
+
+<h3>02 Reactivity</h3>
+<nav>
+
+  <a href="/01-basic-svelte-02-reactivity-01-state">
+  01 State
+  </a>
+
+</nav>
+
+<hr>
+
+<nav>
+
+  <h3>03 Props</h3>
+
+  <a href="/01-basic-svelte-03-props-01-declaring-props">
+  01 Declaring props
+  </a>
+  
+  <a href="/01-basic-svelte-03-props-02-default-values">
+  02 Default Values
   </a>
 
 </nav>
@@ -70,6 +97,11 @@
     display: flex;
     flex-direction: column;
   }
+
+  h2 {
+    color: darkorchid;
+  }
+
 </style>
 
 <!---------------------------------------------------------------------------->
