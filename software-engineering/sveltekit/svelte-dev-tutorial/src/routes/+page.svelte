@@ -1,21 +1,33 @@
 <h2>Basic Svelte</h2>
 
+<hr>
+
 <nav>
 
+  <h3>Introduction</h3>
+
   <a href="/01-basic-svelte-01-introduction-01-welcome-to-svelte">
-  01 Introduction, 01 Welcome to Svelte
+  01 Welcome to Svelte
   </a>
 
   <a href="/01-basic-svelte-01-introduction-02-your-first-component">
-  01 Introduction, 02 Your First Component
+  02 Your First Component
   </a>
 
   <a href="/01-basic-svelte-01-introduction-03-dynamic-attributes">
-  01 Introduction, 03 Dynamic attributes
+  03 Dynamic attributes
   </a>
 
   <a href="/01-basic-svelte-01-introduction-04-styling">
-  01 Introduction, 04 Styling
+  04 Styling
+  </a>
+  
+  <a href="/01-basic-svelte-01-introduction-05-nested-components">
+  05 Nested Components
+  </a>
+  
+  <a href="/01-basic-svelte-01-introduction-06-html-tags">
+  06 HTML tags
   </a>
 
 </nav>

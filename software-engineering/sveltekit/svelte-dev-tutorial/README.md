@@ -29,10 +29,8 @@ _______________________________________________________________________________
 _______________________________________________________________________________
 ### 01 - Basic SvelteKit
 
-#### Introduction
-##### `Completed` Welcome to Svelte
-##### `Completed` Your first component 
-##### `Completed` Dynamic attributes
+#### `Completed` Introduction
+#### Reactivity
 
 _______________________________________________________________________________
 ### 02 - Advanced Svelte
