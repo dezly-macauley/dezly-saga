@@ -13,6 +13,8 @@
     <a href="/">Home</a>
 </nav>
 
+<hr>
+
 <!-- 
     NOTE: This is a convinient way of making sure
     that every child route (+page.svelte) has the heading above.

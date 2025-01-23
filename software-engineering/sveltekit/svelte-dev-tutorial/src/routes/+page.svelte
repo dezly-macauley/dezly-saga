@@ -1,13 +1,30 @@
-<hr>
+<h2>Basic Svelte</h2>
 
 <nav>
 
-    <a href="/01-basic-svelte-01-introduction-02-your-first-component">
-    01 Basic Svelte, 01 Introduction, 02 Your First Component
+    <a href="/01-basic-svelte-01-introduction-01-welcome-to-svelte">
+    01 Introduction, 01 Welcome to Svelte
     </a>
 
+    <a href="/01-basic-svelte-01-introduction-02-your-first-component">
+    01 Introduction, 02 Your First Component
+    </a>
+
+    <a href="/01-basic-svelte-01-introduction-03-dynamic-attributes">
+    01 Introduction, 03 Dynamic attributes
+    </a>
+
+
+</nav>
+
+<hr>
+
+<h2>Basic SvelteKit</h2>
+
+<nav>
+
     <a href="/03-basic-sveltekit-02-routing-01-pages">
-    03 Basic SveleKit, 02 Routing, 01 Pages
+    02 Routing, 01 Pages
     </a>
 
 </nav>
