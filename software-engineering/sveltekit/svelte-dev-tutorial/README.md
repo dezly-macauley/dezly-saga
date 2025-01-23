@@ -32,6 +32,7 @@ _______________________________________________________________________________
 #### Introduction
 ##### `Completed` Welcome to Svelte
 ##### `Completed` Your first component 
+##### `Completed` Dynamic attributes
 
 _______________________________________________________________________________
 ### 02 - Advanced Svelte

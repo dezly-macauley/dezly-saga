@@ -1,5 +1,5 @@
 <nav>
-	<a href="/about">about</a>
+  <a href="/about">about</a>
 </nav>
 
 <h1>about</h1>

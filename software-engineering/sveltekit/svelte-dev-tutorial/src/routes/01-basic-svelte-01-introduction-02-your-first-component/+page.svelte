@@ -1,9 +1,9 @@
 <!--
-    NOTE: Everything inside the script tag is just regular TypeScript
+  NOTE: Everything inside the script tag is just regular TypeScript
 -->
 <script lang="ts">
    
-    let name: string = "Svelte"
+  let name: string = "Svelte"
 
 </script>
 
