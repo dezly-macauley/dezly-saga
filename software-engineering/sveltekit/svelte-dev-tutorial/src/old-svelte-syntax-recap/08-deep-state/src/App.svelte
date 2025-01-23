@@ -15,10 +15,6 @@
 	}
 </script>
 
-<!-- 
-    This is just regular JavaScript
-    Each element in the array will be displayed and separated by a `,`
--->
 <p>
     The list of numbers is:<br>
     {numbers.join(" , ")}

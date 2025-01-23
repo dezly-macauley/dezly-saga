@@ -29,15 +29,15 @@
 This button has been clicked {click_counter}
 <!--
   NOTE: `?` is called a ternary operator
-  If click_counter is greater than 1 then the heading will be:
-  This button has been clicked {click_counter} times
+  If click_counter is 1 then the heading will be:
+  This button has been clicked 1 time
   ----------------------------------------------------------
   Otherwise it will display:
-  This button has been clicked {click_counter} time
+  This button has been clicked {click_counter} times
   
   //----------------------------------------------------------
 -->
-{click_counter > 1 ? "times" : "time"}
+{click_counter == 1 ? "time" : "times"}
 </h4>
 <button onclick={increase_click_counter}>
   Click Me
