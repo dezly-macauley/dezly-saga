@@ -261,10 +261,11 @@ It should point to the version of Python in the `.venv` directory
 
 ...af-high-performance-sqlite/.venv/bin/python
 _______________________________________________________________________________
-### Install litecli
+### Install litecli and sqlite-utils
 
 ```
 uv add litecli
+uv add sqlite-utils
 ```
 
 _______________________________________________________________________________
