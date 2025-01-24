@@ -68,6 +68,47 @@
   <a href="/01-basic-svelte-04-logic-01-if-blocks">
   01 If blocks
   </a>
+  
+  <a href="/01-basic-svelte-04-logic-02-else-blocks">
+  02 Else blocks
+  </a>
+
+  <a href="/01-basic-svelte-04-logic-03-else-if-blocks">
+  03 Else-if blocks
+  </a>
+
+  <a href="/01-basic-svelte-04-logic-04-each-blocks">
+  04 Each blocks
+  </a>
+
+</nav>
+
+<hr>
+<!---------------------------------------------------------------------------->
+
+<h2>Basic SvelteKit</h2>
+
+<nav>
+
+  <a href="/03-basic-sveltekit-02-routing-01-pages">
+  02 Routing, 01 Pages
+  </a>
+
+</nav>
+
+<hr>
+
+<!---------------------------------------------------------------------------->
+<!-- SECTION: CSS -->
+
+<style>
+  nav {
+
+    /*  NOTE: Flexbox
+
+      1. This will enable the flexbox layout,
+
+/017 󰉋  01-basic-svelte-04-logic-04-each-blocks/
 
 </nav>
 
