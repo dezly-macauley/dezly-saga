@@ -105,4 +105,4 @@ output.even-row = ""
 # they will be executed in the same order as they appear in the list.
 [startup_commands]
 #commands = ".tables", "pragma foreign_keys = ON;"
-# vi: ft=dosini
+# vi: ft=ini
