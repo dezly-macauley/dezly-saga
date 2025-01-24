@@ -75,9 +75,9 @@ Dezly is stored as text
 +-----------+
 ```
 
-The way this works is due to something called `affinity`
+The way this works is due to something called `type affinity`
 
-1. Column a is for integers, so that is the affinity.
+1. Column a is for integers, so `integer` is the type affinity.
 2. When you put a value into column a, SQLite will try to store that value
 as an integer.
 3. If it can't, it will store that value as another type to avoid data loss.
