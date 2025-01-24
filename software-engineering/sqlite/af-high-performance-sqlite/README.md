@@ -82,7 +82,7 @@ _______________________________________________________________________________
 uv venv -p 3.13
 ```
 _______________________________________________________________________________
-### Create a `.gitignore` file
+### Create a `.gitignore` file in the root of your project
 
 Add the following to the file:
 
@@ -97,6 +97,12 @@ wheels/
 
 # Virtual environments
 .venv
+```
+_______________________________________________________________________________
+### Create a practice database in the root of your project
+
+```
+practice_db.sqlite
 ```
 _______________________________________________________________________________
 ### Create a directory for `litecli` configuration files:
@@ -236,6 +242,19 @@ export litecli_config_path="$litecli_configs/$selected_config"
 # vi: ft=bash
 ```
 _______________________________________________________________________________
+### Create a `Makefile` in the root directory of the project
+
+Add this to the `Makefile`
+
+```Makefile
+# NOTE: To use this command:
+# `make run`
+
+run:
+	 @litecli --liteclirc $(litecli_config_path) practice_db.sqlite
+```
+
+_______________________________________________________________________________
 ### Close the repo and navigate to it via the terminal
 
 You should see this error when you enter
@@ -269,10 +288,10 @@ uv add sqlite-utils
 ```
 
 _______________________________________________________________________________
-### To start litecli
+### To start litecli using the Makefile
 
 ```
-litecli --liteclirc $litecli_config_path database_file.sqlite
+make run
 ```
 
 _______________________________________________________________________________
