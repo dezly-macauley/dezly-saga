@@ -9,6 +9,7 @@ _______________________________________________________________________________
 14. `Completed` Flexible types
 15. `Completed` Types
 16. `Completed` Strict types
+18. `Completed` Booleans 
 
 _______________________________________________________________________________
 ## Module 4 - Optimizing SQLite
