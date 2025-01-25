@@ -20,6 +20,7 @@ _______________________________________________________________________________
 ## Module 5 - Indexes
 34. `Completed` Introduction to indexes
 35. `Completed` Primary, secondary, and clustered indexes 
+36. `Completed` Without rowid tables
 _______________________________________________________________________________
 ## Module 7 - Operating SQLite
 68. `Completed` Multi-database 
