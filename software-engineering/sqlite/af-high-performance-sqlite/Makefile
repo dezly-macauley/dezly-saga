@@ -2,4 +2,4 @@
 # `make run`
 
 run:
-	 @litecli --liteclirc $(litecli_config_path) practice_db.sqlite
+	@litecli --liteclirc $(litecli_config_path) practice_db.sqlite
