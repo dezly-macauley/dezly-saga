@@ -18,7 +18,8 @@ insert into character_info values
     ('Batman', false),
     ('Superman', true),
     ('Flash', true),
-    ('Robin', false);
+    ('Robin', false)
+;
 ```
 _______________________________________________________________________________
 
