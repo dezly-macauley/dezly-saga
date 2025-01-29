@@ -18,8 +18,6 @@ fn main() {
     println!("city_temperature: {}", city_temperature);
     // city_temperature: -5
 
-    fkjfskjfskjj akja;cc
-
     //_________________________________________________________________________
     // SUB_SECTION: Unsigned Integers
     // 1. Only positive numbers with no decimals 
