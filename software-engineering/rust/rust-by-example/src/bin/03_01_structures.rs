@@ -13,6 +13,7 @@ struct Person {
 
 //_____________________________________________________________________________
 // SECTION: 2. Creating a tuple struct 
+// This is basically a struct without named fields
 
 
 // NOTE: I personally don't find these useful
