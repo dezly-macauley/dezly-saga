@@ -17,11 +17,6 @@ insert into user_accounts values
 select * from user_accounts;
 ```
 
-The output:
-```sql
-
-```
-
 ### How to update multiple balances at once
 
 ```sql

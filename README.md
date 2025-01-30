@@ -20,7 +20,7 @@ This is the saga of Dezly Macauley.
 ___
 ### Systems Programming
 
-**`Low-Level Control`**
+**`Lower-Level Control`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
     <img src="./.readme/rust.png" width="50" height="50" alt="Rust Logo" />
     <img src="./.readme/zig.png" width="50" height="50" alt="Zig Logo" />
@@ -110,4 +110,13 @@ ___
 2. JavaScript
 3. CSS 
 4. HTML
+___
+### Mobile Development 
+
+**`Cross-Platform Development`**
+<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
+    <img src="./.readme/react.png" width="50" height="50" alt="TypeScript Logo" />
+</div>
+
+1. React Native
 ___

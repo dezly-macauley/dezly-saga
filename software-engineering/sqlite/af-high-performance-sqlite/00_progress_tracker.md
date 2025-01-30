@@ -10,6 +10,8 @@ _______________________________________________________________________________
 15. `Completed` Types
 16. `Completed` Strict types
 18. `Completed` Booleans 
+20. `Completed` Rowid tables
+22. `Completed` Without rowid
 
 _______________________________________________________________________________
 ## Module 4 - Optimizing SQLite
