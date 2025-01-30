@@ -198,5 +198,47 @@ fn main() {
     // and not a memory address that points to that value.
     
     //_________________________________________________________________________
+    // SECTION: Using an enum to store multiple types 
+
+    // In this example, I want to store rows of data from an SQLite table.
+    // Each row has values that are of different types.
+    enum PlayerDataRow {
+        Name(String),
+        HighScore(i32),
+        AccountBalance(f64)
+    }
+
+    let player_one_data_row: Vec<PlayerDataRow> = vec![
+        PlayerDataRow::Name(String::from("Seth")),
+        PlayerDataRow::HighScore(628),
+        PlayerDataRow::AccountBalance(43.89),
+    ];
+
+    // NOTE: Make sure to use `&` because you don't want the for loop to take
+    // ownership of the Vector or the elements inside it.
+
+    for element in &player_one_data_row {
+        match element {
+            PlayerDataRow::Name(value) => {
+                println!("Name: {}", *value)
+            },
+            PlayerDataRow::HighScore(value) => {
+                println!("High Score: {}", *value)
+            },
+            PlayerDataRow::AccountBalance(value) => {
+                println!("Account Balance: {}", *value)
+            }
+        }
+    }
+
+    // Name: Seth
+    // High Score: 628
+    // Account Balance: 43.89
+
+    // NOTE: You do not need to dereference value in println! because
+    // println! does it for you.
+    // I just prefer to be explicit
+
+    //_________________________________________________________________________
 
 }
