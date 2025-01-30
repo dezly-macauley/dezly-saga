@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# React Dev Tutorial
+- https://react.dev/learn
+_______________________________________________________________________________
+## If you have just cloned this repo the run this command
 
-## Getting Started
+NOTE: This project uses `bun` so you will have to have bun installed.
 
-First, run the development server:
+```sh
+bun install
+```
+_______________________________________________________________________________
+## To create this repo from scratch
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Make sure that you are in the repository where this command is used and then
+run this command:
+
+```sh
+bunx create-next-app@latest
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I then used this command to upgrage to TailwindCSS 4.0
+- This command may not be neccessary in the future
+```sh
+bunx @tailwindcss/upgrade@next
+```
+_______________________________________________________________________________
+## To run your project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open a new terminal and navigate to your project directory, 
+then run this command:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+bun run dev
+```
 
-## Learn More
+You will get an output that looks like this:
+```
+$ next dev --turbopack
+   ▲ Next.js 15.1.6 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.8.106:3000
 
-To learn more about Next.js, take a look at the following resources:
+ ✓ Starting...
+ ✓ Ready in 916ms
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Leave this terminal running, copy either of the links 
+and paste it in your browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Use the local one if you are testing your local machine.
+E.g. Your laptop
 
-## Deploy on Vercel
+Use the network one if you are testing this one another device 
+such as your phone that is connected to the same network
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+_______________________________________________________________________________
