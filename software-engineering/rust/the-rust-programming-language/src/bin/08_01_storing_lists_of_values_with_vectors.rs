@@ -156,8 +156,47 @@ fn main() {
 
     //_________________________________________________________________________
     // SECTION: How to iterate over the values in a Vector
+    // Immutable borrow
     
-    // let favourite_numbers: Vec<i32> = vec![100, 32, 57];
+    let mut team_health_bars: Vec<i32> = vec![100, 32, 57];
+
+    // NOTE: Remember to use a `&` because you don't want the for loop to
+    // take ownership of the the Vector or the elements inside it.
+    // This is an immutable borrow (read-only)
+    for element in &team_health_bars {
+        println!("{}", element);
+    }
+    // 100
+    // 32
+    // 57
 
     //_________________________________________________________________________
+    // SECTION: How to iterate over the values in a Vector
+    // mutable borrow
+   
+   // NOTE: Use `&mut` for a mutable borrow
+    // This tells the Rust compiler:
+    // I don't want to the for loop to take ownership of the Vector or the 
+    // elements inside it but I want to modify the elements in the original
+    // Vector.
+
+    for element in &mut team_health_bars {
+        *element = *element + 300; 
+
+        // You can also write it like this:
+        // *element += 300; 
+    }
+
+    println!("The updated team_health_bars are {:?}", team_health_bars);
+    // The updated team_health_bars are [400, 332, 357]
+
+
+    // NOTE: The dereference operator `*`
+    // When you want to modify the actual value in a Vector you need to 
+    // use this `*`
+    // It tells Rust that you want access to the actual value of the element
+    // and not a memory address that points to that value.
+    
+    //_________________________________________________________________________
+
 }
