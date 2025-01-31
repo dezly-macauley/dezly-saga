@@ -19,6 +19,7 @@ _______________________________________________________________________________
 
 ```
 psql -U "postgres" -d "postgres""
+psql -U postgres -d postgres"
 ```
 
 The will connect using a default user called "postgresql" and a default 

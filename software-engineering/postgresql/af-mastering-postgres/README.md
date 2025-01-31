@@ -1,8 +1,140 @@
 # Aaron Francis - Mastering PostgreSQL
 _______________________________________________________________________________
-## Setup Instructions
+## Phase 1 - PostgreSQL Setup
 
-If you have cloned this repo run the following commands
+_______________________________________________________________________________
+### Install PostgreSQL
+
+This is for Arch Linux:
+```
+sudo pacman -S --needed postgresql
+```
+
+_______________________________________________________________________________
+### Iniatialize PostgreSQL and start the service
+
+PostgreSQL needs to set up its database files before you can use it:
+
+Run this command from your home directory:
+```sh
+sudo -u postgres initdb -D /var/lib/postgres/data \
+--locale=C.UTF-8 \
+--encoding=UTF8 \
+--data-checksums \
+--auth-local=peer \
+--auth-host=scram-sha-256
+
+```
+_______________________________________________________________________________
+### Start the PostgreSQL service
+
+Unlike SQLite which is an embedded database, 
+PostgreSQL is a client-server database. 
+
+SQLite is an embedded database, meaning the database engine is integrated into the application that uses it. There's no need for a separate server process. Instead, SQLite reads and writes directly to a database file on disk, making it lightweight and self-contained.
+
+On the other hand, PostgreSQL is a client-server database. It requires a server process to run separately and handle database operations. Applications (clients) connect to this server using a network protocol, even if the client and server are on the same machine.
+
+**Run this command to check if the PostgreSQL server is running**
+```
+sudo systemctl status postgresql
+```
+
+To start the service / server
+```
+sudo systemctl start postgresql
+```
+
+To stop the service / server
+```
+sudo systemctl stop postgresql
+```
+_______________________________________________________________________________
+## Phase 2 -  Use the `psql` cli to create a PostgreSQL user and database
+
+_______________________________________________________________________________
+Log into the `psql` the default PostgreSQL command line tool as the the 
+default user. The default user is called `postgres`
+
+Run this command. The `u` stands for user
+```sh
+sudo -u postgres psql
+```
+
+Your prompt will now look like this:
+```
+postgres=#
+```
+
+This is the prompt that you will use for admin tasks like creating users,
+and creating databases.
+_______________________________________________________________________________
+### Create a PostgreSQL user
+
+**Run these commands while logged into the `postgres=#` prompt**
+
+Create your username and password:
+
+NOTE: The username should not contain captal letter, hyphens, spaces, or
+any other characters.
+
+```sql
+CREATE USER dezly_macauley WITH SUPERUSER; 
+```
+
+To check that the user was created run this command:
+```sql
+\du
+```
+
+The output
+```sql
+                                        List of roles
+   Role name    |                         Attributes
+----------------+------------------------------------------------------------
+ dezly_macauley | Superuser
+ postgres       | Superuser, Create role, Create DB, Replication, Bypass RLS
+```
+
+_______________________________________________________________________________
+### Use the interactive command to set the password for the user
+
+This will allow you to set the password interactively:
+```sql
+\password dezly_macauley
+```
+_______________________________________________________________________________
+### Create a practice database
+
+```sh
+CREATE DATABASE practice_db;
+```
+_______________________________________________________________________________
+### Give your user permission to interact with the database
+
+```sql
+GRANT ALL PRIVILEGES ON DATABASE practice_db 
+TO dezly_macauley;
+```
+
+To view the list of databases:
+```sql
+\l
+```
+_______________________________________________________________________________
+
+To exit the prompt:
+```sql
+\q
+```
+_______________________________________________________________________________
+## Phase 3 - Setting up your PostgreSQL workspace
+
+**NOTE: Run these commands from your normal shell**
+_______________________________________________________________________________
+### If you have cloned this repo run the following commands
+
+**NOTE: If you are building this repo from scratch, go to the next step**
 
 Install all of the project dependencies.
 ```
@@ -13,6 +145,7 @@ Give direnv permission to setup the virtual environment
 ```
 direnv allow
 ```
+
 _______________________________________________________________________________
 ## How to create this directory from scratch
 
@@ -40,7 +173,7 @@ _______________________________________________________________________________
 I have chosen this location:
 
 ```
-dezly-saga/software-engineering/postgresql/af-mastering-postgres`
+dezly-saga/software-engineering/postgresql/af-mastering-postgres
 ```
 
 _______________________________________________________________________________
@@ -102,16 +235,6 @@ wheels/
 .venv
 ```
 _______________________________________________________________________________
-### Create a practice database in the root of your project
-
-```
-touch practice_db.postgresql
-```
-
-NOTE: PostgreSQL does not have a specific file extension.
-All it cares about is that the code inside the file is valid SQL.
-
-_______________________________________________________________________________
 ### Create a `pgcli configuration` file
 
 I will be using `pgcli` for my setup. 
@@ -123,8 +246,9 @@ while having autocompletion and syntax highlighting.
 touch pgcli_config
 ```
 _______________________________________________________________________________
+### Configure `pgcli`
 
-Add this inside the file:
+Open the `pgcli_config` file and add replace the contents with this:
 ```ini
 # vi: ft=dosini
 [main]
@@ -374,15 +498,17 @@ _______________________________________________________________________________
 
 NOTE: For this to work you need the following:
 - The program `direnv` is installed on your system.
-- Also you should have the following line added to your `.zshrc`
+- Also you should have the following lines added to your `.zshrc`
 
-~/.zshrc
+**~/.zshrc**
 ```sh
+
+# This will allow direnv to automatically load the environment variables in
+# a `.envrc` file when you enter your project directory.
 eval "$(direnv hook zsh)"
 
-# NOTE: This line below will disable the messages that direnv displays when 
+# This line below will disable the messages that direnv displays when 
 # you enter a directory 
-
 export DIRENV_LOG_FORMAT=""
 ```
 _______________________________________________________________________________
@@ -391,9 +517,9 @@ _______________________________________________________________________________
 Add the following lines to the file:
 ```bash
 source .venv/bin/activate
-export pgli_config="./pgcli_config"
+export pgcli_config="./pgcli_config"
 
-# NOTE: The line below has nothing to do with `direnv`
+# The line below has nothing to do with `direnv`
 # This is simply to tell Neovim to treat this a bash file, 
 # .envrc is not a recognized file type.
 # vi: ft=bash
@@ -408,13 +534,37 @@ touch Makefile
 Add this to the `Makefile`
 
 ```Makefile
-# NOTE: To use this command:
-# `make run`
+# NOTE: To use these commands:
+# `make name-of-command`
+# E.g. 
+# `make status`
+# `make start`, 
 
-run:
-	 @pgcli --pgclirc $(pgcli_config) practice_db.postgresql
+# Check if the PostgreSQL server is working
+status:
+	@sudo systemctl status postgresql
+
+# Start the PostgreSQL server
+start:
+	@sudo systemctl start postgresql
+
+# Stop the PostgreSQL server
+stop:
+	@sudo systemctl stop postgresql
+
+# Interact with your database using `pgcli`
+pgcli:
+	@pgcli \
+		--dbname practice_db \
+        --host 127.0.0.1 \
+        --port 5432 \
+		--username dezly_macauley \
+        --password \
+        --pgclirc $(pgcli_config) 
 ```
 
+`127.0.01` is the same as `localhost`. 
+This means the database server is running on your local machine.
 _______________________________________________________________________________
 ### Close the repo and navigate to it via the terminal
 
@@ -441,17 +591,16 @@ It should point to the version of Python in the `.venv` directory
 
 ...af-mastering-postgres/.venv/bin/python
 _______________________________________________________________________________
-### Install pgcli
+### Install pgcli (Command Line Tool)
 
 ```
 uv add pgcli
 ```
-
 _______________________________________________________________________________
-### To start litecli using the Makefile
+### To start pgcli using the Makefile
 
 ```
-make run
+make pgcli
 ```
 
 _______________________________________________________________________________
@@ -460,4 +609,21 @@ _______________________________________________________________________________
 ```
 exit
 ```
+_______________________________________________________________________________
+### Setup pgadmin later:
+
+
+### Optional setup `pgadmin` 
+
+From the root directory of your project, run this command:
+```
+uv add pgadmin4 
+```
+_______________________________________________________________________________
+Create a custom data directory:
+
+```
+mkdir pgadmin_data
+```
+
 _______________________________________________________________________________
