@@ -518,7 +518,13 @@ _______________________________________________________________________________
 
 Add the following lines to the file:
 ```bash
+# Activat the Python virtual environment to ensure that this project is
+# using the correct version of Python,
+# and also that it using the version installed by `uv` and not the version
+# of Python that is installed system-wide
 source .venv/bin/activate
+
+# The location of the configuration file the `pgcli` tool in this project
 export pgcli_config="./pgcli_config"
 
 # The line below has nothing to do with `direnv`
@@ -601,8 +607,8 @@ uv add pgcli
 _______________________________________________________________________________
 ### To start pgcli using the Makefile
 
-```
-make pgcli
+```sh
+make sql
 ```
 
 _______________________________________________________________________________
@@ -612,20 +618,61 @@ _______________________________________________________________________________
 exit
 ```
 _______________________________________________________________________________
-### Setup pgadmin later:
-
-
-### Optional setup `pgadmin` 
+## Phase 4 (Optional) - Setup pgAdmin
 
 From the root directory of your project, run this command:
 ```
 uv add pgadmin4 
 ```
 _______________________________________________________________________________
-Create a custom data directory:
+### Create the directories that pgadmin4 needs for its own internal data 
 
+These will be created outside of your project directory:
+```sh
+sudo mkdir /var/lib/pgadmin
+sudo mkdir /var/log/pgadmin
 ```
-mkdir pgadmin_data
+
+Give yourself permission to access these files:
+```sh
+sudo chown $USER /var/lib/pgadmin
+sudo chown $USER /var/log/pgadmin
 ```
+_______________________________________________________________________________
+### From your project directory run this command
+
+You need to run this command when you start using pgadmin4:
+```sh
+pgadmin4
+```
+
+NOTE: The first time you log in you will be asked to setup an email and
+a password to login to pgadmin4
+
+```sh
+NOTE: Configuring authentication for SERVER mode.
+
+Enter the email address and password to use for the initial pgAdmin user account:
+
+Email address: dezlymacauley@proton.me
+Password:
+Retype password:
+Starting pgAdmin 4. Please navigate to http://127.0.0.1:5050 in your browser.
+ * Serving Flask app 'pgadmin'
+ * Debug mode: off
+```
+
+Keep this running and open the link in your browser
+```
+http://127.0.0.1:5050
+```
+_______________________________________________________________________________
+### To set pgadmin4 to dark mode
+
+Go to `File`, then click `Preferences`
+
+Then scroll down to `Miscellaneous`, then click `Themes`
+
+Select `Dark` and click `Save`
 
 _______________________________________________________________________________

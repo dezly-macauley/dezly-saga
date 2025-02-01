@@ -5,6 +5,10 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "pgadmin4>=6.21",
+    # A command line tool with autocompletion and syntax highlighting
+    # Used to interact with your database from the command line
     "pgcli>=4.1.0",
+    # The official graphical user interface fo PostgreSQL
+    # An secondary way to interact with your database.
+    "pgadmin4>=6.21",
 ]

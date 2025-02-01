@@ -17,10 +17,14 @@ stop:
 	@sudo systemctl stop postgresql
 
 # Interact with your database using `pgcli`
-pgcli:
+sql:
 	@pgcli \
 	--dbname practice_db \
         --host 127.0.0.1 \
         --port 5432 \
 	--username dezly_macauley \
         --pgclirc $(pgcli_config) 
+
+# Setup pgadmin4 for the first time
+sql-gui:
+	@pgadmin4
