@@ -18,36 +18,36 @@ This is the saga of Dezly Macauley.
 > <br>Pablo Picasso.
 
 ___
-### Systems Programming
 
-**`Lower-Level Control`**
+<details>
+<summary>
+    <h3>⚙️  Low-Level Systems Programming</h3>
+</summary>
+
+**`Modern`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
     <img src="./.readme/rust.png" width="50" height="50" alt="Rust Logo" />
     <img src="./.readme/zig.png" width="50" height="50" alt="Zig Logo" />
-    <img src="./.readme/c.png" width="50" height="50" alt="Zig Logo" />
 </div>
 
 1. Rust
 2. Zig
-3. C
 
-**`Garbage Collected`**
+**`Legacy`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-    <img src="./.readme/go.png" width="50" height="50" alt="Rust Logo" />
+    <img src="./.readme/c.png" width="50" height="50" alt="Zig Logo" />
 </div>
 
-1. Go
-___
-### Artificial Intelligence
+1. C
 
-**`Core Languages`**
-<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-    <img src="./.readme/python.png" width="50" height="50" alt="TypeScript Logo" />
-</div>
+</details>
 
-1. Python
 ___
-### Database Management
+
+<details>
+<summary>
+    <h3>🗃️ Database Management</h3>
+</summary>
 
 **`SQL Databases`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
@@ -58,34 +58,74 @@ ___
 1. PostgreSQL
 2. SQLite
 
+</details>
+
 ___
-### Smart Contract Development
+
+<details>
+<summary>
+    <h3>🔗 Smart Contract Development</h3>
+</summary>
+
+**`Core Languages`**
+<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
+    <img src="./.readme/solidity.png" width="50" height="50" alt="Vyper Logo" />
+    <img src="./.readme/vyper.png" width="50" height="50" alt="Vyper Logo" />
+</div>
+
+1. Solidity
+2. Vyper
 
 **`Frameworks`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-    <img src="./.readme/solidity.png" width="50" height="50" alt="Vyper Logo" />
     <img src="./.readme/foundry.png" width="50" height="50" alt="Moccasin Logo" />
-    <img src="./.readme/vyper.png" width="50" height="50" alt="Vyper Logo" />
     <img src="./.readme/moccasin.png" width="50" height="50" alt="Moccasin Logo" />
 </div>
 
-1. Solidity and Foundry 
-2. Vyper and Moccasin
+- Foundry
+- Moccasin
+
+</details>
 
 ___
-### Web Development 
 
-**`Frameworks`**
+<details>
+<summary>
+    <h3>🖼️ Web Development</h3>
+</summary>
+
+**`User Interface Frameworks`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-    <img src="./.readme/nextjs.png" width="50" height="50" alt="Django Logo" />
     <img src="./.readme/react.png" width="50" height="50" alt="Django Logo" />
     <img src="./.readme/sveltekit.png" width="50" height="50" alt="SvelteKit Logo" />
-    <img src="./.readme/tailwindcss.png" width="50" height="50" alt="Tailwind CSS Logo" />
 </div>
 
-1. React and Next.js
-2. Svelte and SvelteKit
-3. Tailwind CSS
+1. React
+2. Svelte
+
+**`Core Languages`**
+<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
+    <img src="./.readme/go.png" width="50" height="50" alt="Rust Logo" />
+    <img src="./.readme/typescript.png" width="50" height="50" alt="TypeScript Logo" />
+    <img src="./.readme/javascript.png" width="50" height="50" alt="TypeScript Logo" />
+    <img src="./.readme/css.png" width="50" height="50" alt="CSS Logo" />
+    <img src="./.readme/html.png" width="50" height="50" alt="HTML Logo" />
+</div>
+
+1. Go
+2. TypeScript
+3. JavaScript
+4. CSS 
+5. HTML
+
+**`Full-Stack Frameworks`**
+<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
+    <img src="./.readme/nextjs.png" width="50" height="50" alt="Django Logo" />
+    <img src="./.readme/sveltekit.png" width="50" height="50" alt="SvelteKit Logo" />
+</div>
+
+- Next.js
+- SvelteKit
 
 **`Build Tools`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
@@ -94,29 +134,73 @@ ___
     <img src="./.readme/bun.png" width="50" height="50" alt="Bun Logo" />
 </div>
 
-1. Vite
-2. Turbopack
-3. Bun
+- Vite
+- Turbopack
+- Bun
 
-**`Core Languages`**
+</details>
+
+___
+<details>
+<summary>
+    <h3>🎨 User Interface / User Experience Design</h3>
+</summary>
+
+**`Frameworks`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
-    <img src="./.readme/typescript.png" width="50" height="50" alt="TypeScript Logo" />
-    <img src="./.readme/javascript.png" width="50" height="50" alt="TypeScript Logo" />
-    <img src="./.readme/css.png" width="50" height="50" alt="CSS Logo" />
-    <img src="./.readme/html.png" width="50" height="50" alt="HTML Logo" />
+    <img src="./.readme/tailwindcss.png" width="50" height="60" alt="TypeScript Logo" />
 </div>
 
-1. TypeScript
-2. JavaScript
-3. CSS 
-4. HTML
-___
-### Mobile Development 
+1. Tailwind CSS
 
-**`Cross-Platform Development`**
+**`Core Languages `**
+<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
+    <img src="./.readme/css.png" width="50" height="50" alt="TypeScript Logo" />
+    <img src="./.readme/html.png" width="50" height="50" alt="TypeScript Logo" />
+</div>
+
+1. CSS 
+2. HTML
+
+</details>
+
+___
+
+<details>
+<summary>
+    <h3>🤳 Mobile Development</h3>
+</summary>
+
+**`Cross-Platform Solutions: iOS and Android`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
     <img src="./.readme/react.png" width="50" height="50" alt="TypeScript Logo" />
 </div>
 
 1. React Native
+
+**`Native Solutions: iOS`**
+<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
+    <img src="./.readme/swift.png" width="50" height="50" alt="TypeScript Logo" />
+</div>
+
+1. Swift
+
+</details>
+
+___
+
+<details>
+<summary>
+    <h3>🤖 Artificial Intelligence</h3>
+</summary>
+
+**`Core Languages`**
+<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
+    <img src="./.readme/python.png" width="50" height="50" alt="TypeScript Logo" />
+</div>
+
+1. Python
+
+</details>
+
 ___
