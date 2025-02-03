@@ -38,17 +38,3 @@ _______________________________________________________________________________
 08. Front-End Developer Capstone 
 09. Coding Interview Preparation [iOS Developer Professional Certificate]
 _______________________________________________________________________________
-
-_______________________________________________________________________________
-### Meta Back-End Developer Professional Certificate (7 Unique Courses)
-01. Introduction to Back-End Development
-02. Programming in Python
-03. Version Control [iOS Developer Professional Certificate]
-04. Introduction to Databases for Back-End Development
-05. Django Web Framework 
-06. APIs
-07. The Full Stack
-08. Back-End Developer Capstone 
-09. Coding Interview Preparation [iOS Developer Professional Certificate]
-
-_______________________________________________________________________________
