@@ -12,10 +12,15 @@ _______________________________________________________________________________
 `Completed` 07 - Numeric
 `Completed` 08 - Floating point
 `Completed` 09 - Storing money 
+`Completed` 09 - Storing money 
+`Completed` 10 - NaNs and infinity 
+
+`Completed` 18 - Boolean 
 _______________________________________________________________________________
+## Module 03 - Advanced Data Types
 
 
 _______________________________________________________________________________
-## Module 12 - Outro
+## `Completed` Module 12 - Outro
 `Completed` 115 - Thank you
 _______________________________________________________________________________

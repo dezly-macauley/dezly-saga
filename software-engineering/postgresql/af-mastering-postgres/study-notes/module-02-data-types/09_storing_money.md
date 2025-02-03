@@ -38,4 +38,7 @@ _______________________________________________________________________________
 
 Create a separate column that stores the value next to the currency.
 
+E.g. Currency codes have 3 letters like 'USD', 'EUR', 'JPY'
+currency CHAR(3)
+
 _______________________________________________________________________________
