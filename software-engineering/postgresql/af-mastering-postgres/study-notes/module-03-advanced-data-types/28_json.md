@@ -125,6 +125,113 @@ VALUES
     ('tsunade_senju.json', '\! cat json-examples/tsunade_senju.json'::jsonb);
 
 _______________________________________________________________________________
+### How to view the values of each field in the json object
+
+NOTE: There is a difference between `->` and `->>`
+1. `->` This will return the field in `json` format
+- Use this to display nested objects and arrays
+
+2. `->>` This will return the field in `text` format
+- Use this to display primative values like `string`, `number`, 
+`boolean` and `null`
+
+_______________________________________________________________________________
+#### Viewing primative values
+
+NOTE: `as user_handle` tells PostgreSQL 
+what to disply ass the column name when returning the values.
+
+```sql
+select
+    file_data->>'user_handle' as user_handle,
+    file_data->>'daily_post_count' as daily_post_count,
+    file_data->>'yearly_spending' as yearly_spending,
+    file_data->>'is_premium_user' as is_premium_user
+from my_jsonb_table 
+where file_name = 'dezly_macauley.json';
+```
+
+The output looks like this:
+```sql
++----------------+------------------+-----------------+-----------------+
+| user_handle    | daily_post_count | yearly_spending | is_premium_user |
+|----------------+------------------+-----------------+-----------------|
+| dezly_macauley | 225              | 52751.23        | true            |
++----------------+------------------+-----------------+-----------------+
+```
+_______________________________________________________________________________
+#### Viewing compoung types (Arrays)
+
+```sql
+select
+    file_data->'favorite_tags' as favorite_tags
+from my_jsonb_table 
+where file_name = 'dezly_macauley.json';
+```
+
+The output:
+```sql
++--------------------------+
+| favorite_tags            |
+|--------------------------|
+| ["programming", "pizza"] |
++--------------------------+
+```
+_______________________________________________________________________________
+To get a specfic value from the array.
+
+NOTE: The arrows are important
+- `->` means give me the array in the jason object as a data structure
+- `->>` means display the value at that index in the array as text
+
+```sql
+select
+    file_data->'favorite_tags'->>0 as first_tag,
+    file_data->'favorite_tags'->>1 as second_tag 
+from my_jsonb_table 
+where file_name = 'dezly_macauley.json';
+```
+
+The output:
+```sql
++-------------+------------+
+| first_tag   | second_tag |
+|-------------+------------|
+| programming | pizza      |
++-------------+------------+
+```
+_______________________________________________________________________________
+If you had a nested array like this:
+
+```json
+{
+  "favorite_tags": [
+    ["programming", "coding"], 
+    ["pizza", "food"]
+  ]
+}
+```
+
+```sql
+SELECT
+    file_data->'favorite_tags'->0->>0 AS first_tag_in_array_one,
+    file_data->'favorite_tags'->0->>1 AS second_tag_in_array_one,
+    file_data->'favorite_tags'->1->>0 AS first_tag_in_array_two,
+    file_data->'favorite_tags'->1->>1 AS second_tag_in_array_two
+FROM my_jsonb_table 
+WHERE file_name = 'dezly_macauley.json';
+```
+
+```sql
++------------------------+------------------------+-----------------------+-----------------------+
+| first_tag_in_array_one | second_tag_in_array_one | first_tag_in_array_two | second_tag_in_array_two |
+|------------------------|------------------------|------------------------|-------------------------|
+| programming            | coding                 | pizza                  | food                    |
++------------------------+------------------------+------------------------+-------------------------+
+```
+_______________________________________________________________________________
+#### Viewing compoung types (Nested json object)
+
 
 
 _______________________________________________________________________________
