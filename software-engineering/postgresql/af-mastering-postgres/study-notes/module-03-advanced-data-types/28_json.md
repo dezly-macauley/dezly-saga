@@ -128,10 +128,12 @@ _______________________________________________________________________________
 ### How to view the values of each field in the json object
 
 NOTE: There is a difference between `->` and `->>`
-1. `->` This will return the field in `json` format
+1. `->`JSON/JSONB Object Access Operator
+- This will return the field in `json` format
 - Use this to display nested objects and arrays
 
-2. `->>` This will return the field in `text` format
+2. `->>` JSON/JSONB Text Access Operator
+- This will return the field in `text` format
 - Use this to display primative values like `string`, `number`, 
 `boolean` and `null`
 
@@ -240,14 +242,43 @@ select
     file_data->'contact_info'->'address'->>'city' as city,
     file_data->'contact_info'->'address'->>'zip' as zip
 from my_jsonb_table 
-where file_name = 'tsunade_senju.json';
+where file_name = 'dezly_macauley.json';
 ```
 
 ```sql
-+-----------------------+-------------------+--------------------+-------+------+
-| email                 | phone             | street             | city  | zip  |
-|-----------------------|-------------------|--------------------|-------|------|
-| tsunadesenju.com      | +4234557898       | 729 Hashi St       | Leaf  | 95345|
-+-----------------------+-------------------+--------------------+-------+------+
++-------------------+-------------+-------------+-----------+-------+
+| email             | phone       | street      | city      | zip   |
+|-------------------+-------------+-------------+-----------+-------|
+| dezly@example.com | +1234567890 | 123 Tech St | Techville | 12345 |
++-------------------+-------------+-------------+-----------+-------+
+```
+_______________________________________________________________________________
+#### The JSON/JSONB Path Operator, and Path Extractor
+
+1. `#>` Use this when you want to get a compound type back
+- E.g. arrays, or a nested object.
+2. `#>>` Use this when you want to get a primative type back.
+- E.g. A number, string, boolean, or null
+
+This is a better way to access json fileds
+
+```sql
+select
+    file_data #>> '{contact_info, email}' as email,
+    file_data #>> '{contact_info, phone}' as phone,
+    file_data #>> '{contact_info, address, street}' as street,
+    file_data #>> '{contact_info, address, city}' as city,
+    file_data #>> '{contact_info, address, zip}' as zip
+from my_jsonb_table
+where file_name = 'dezly_macauley.json';
+```
+
+The output:
+```sql
++---------------------+---------------+---------------+-------------+---------+
+| email               | phone         | street        | city        | zip     |
+|---------------------+---------------+---------------+-------------+---------|
+| "dezly@example.com" | "+1234567890" | "123 Tech St" | "Techville" | "12345" |
++---------------------+---------------+---------------+-------------+---------+
 ```
 _______________________________________________________________________________
