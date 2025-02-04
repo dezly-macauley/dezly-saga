@@ -232,6 +232,22 @@ WHERE file_name = 'dezly_macauley.json';
 _______________________________________________________________________________
 #### Viewing compoung types (Nested json object)
 
+```sql
+select
+    file_data->'contact_info'->>'email' as email,
+    file_data->'contact_info'->>'phone' as phone,
+    file_data->'contact_info'->'address'->>'street' as street,
+    file_data->'contact_info'->'address'->>'city' as city,
+    file_data->'contact_info'->'address'->>'zip' as zip
+from my_jsonb_table 
+where file_name = 'tsunade_senju.json';
+```
 
-
+```sql
++-----------------------+-------------------+--------------------+-------+------+
+| email                 | phone             | street             | city  | zip  |
+|-----------------------|-------------------|--------------------|-------|------|
+| tsunadesenju.com      | +4234557898       | 729 Hashi St       | Leaf  | 95345|
++-----------------------+-------------------+--------------------+-------+------+
+```
 _______________________________________________________________________________
