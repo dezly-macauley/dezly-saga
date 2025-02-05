@@ -194,6 +194,15 @@ ___
     <h3>🤖 Artificial Intelligence</h3>
 </summary>
 
+**`Frameworks`**
+<div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
+    <img src="./.readme/pytorch.png" width="50" height="50" alt="TypeScript Logo" />
+</div>
+
+1. Pytorch
+
+</details>
+
 **`Core Languages`**
 <div style="display: flex; align-items: center; justify-content: flex-start; gap: 10px;">
     <img src="./.readme/python.png" width="50" height="50" alt="TypeScript Logo" />
