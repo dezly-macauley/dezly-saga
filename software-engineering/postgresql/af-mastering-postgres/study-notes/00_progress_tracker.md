@@ -15,6 +15,7 @@ _______________________________________________________________________________
 `Completed` 09 - Storing money 
 `Completed` 10 - NaNs and infinity 
 `Completed` 12 - Character types 
+`Completed` 13 - Character types 
 
 `Completed` 18 - Boolean 
 _______________________________________________________________________________
